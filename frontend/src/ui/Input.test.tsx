@@ -2,9 +2,9 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import Input from "./Input";
 
 describe("Input component", () => {
-  it("renders label when 'isSign' is true", () => {
+  it("renders label when 'isLoginForm' is true", () => {
     render(
-      <Input name="email" isSign>
+      <Input name="email" isLoginForm>
         Email
       </Input>
     );
@@ -28,7 +28,7 @@ describe("Input component", () => {
 
   it("renders input with correct type", () => {
     render(
-      <Input name="password" type="password" isSign>
+      <Input name="password" type="password" isLoginForm>
         Password
       </Input>
     );
@@ -39,7 +39,7 @@ describe("Input component", () => {
   it("calls onChange handler when typing", () => {
     const handleChange = vi.fn();
     render(
-      <Input name="name" onChange={handleChange} isSign>
+      <Input name="name" onChange={handleChange} isLoginForm>
         Name
       </Input>
     );

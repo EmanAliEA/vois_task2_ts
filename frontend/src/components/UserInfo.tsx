@@ -21,10 +21,10 @@ const UserInfo: React.FC = () => {
         />
         <div className="flex flex-col gap-1 ">
           <p>
-            <b>Name</b>: {user.name}
+            <b>Name</b>: {user.name || ""}
           </p>
           <p>
-            <b>Email</b>: {user.email}
+            <b>Email</b>: {user.email || ""}
           </p>
           <p>
             <b>Designation</b>: {user.job || "_"}

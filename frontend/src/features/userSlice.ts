@@ -21,7 +21,6 @@ const initialState: UserState = {
   isLogin: checkLogin()?.isLogin || false,
   user: checkLogin() || {},
   posts: [],
-  postsPerPage: [],
   numPage: 1,
   error: "",
 };

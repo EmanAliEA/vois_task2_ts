@@ -5,7 +5,7 @@ interface InputProps
   children: React.ReactNode;
   customStyle?: string;
   isRequired?: boolean;
-  isSign?: boolean;
+  isLoginForm?: boolean;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -13,7 +13,7 @@ const Input: React.FC<InputProps> = ({
   type = "text",
   customStyle = "",
   isRequired = true,
-  isSign,
+  isLoginForm,
   ...props
 }) => {
   const inputId = props.name ?? "input";
@@ -21,12 +21,12 @@ const Input: React.FC<InputProps> = ({
   return (
     <div
       className={`flex ${
-        isSign
+        isLoginForm
           ? "flex-col"
           : "border-1 border-s-5 border-s-sky-700 border-gray-300"
       } items-center rounded-s-sm rounded-e-xl ${customStyle}`}
     >
-      {isSign ? (
+      {isLoginForm ? (
         <label className="text-[1.1rem] self-start" htmlFor={inputId}>
           {children}
         </label>
@@ -44,7 +44,7 @@ const Input: React.FC<InputProps> = ({
         type={type}
         {...props} // includes placeholder, name, etc.
         className={`px-2 py-1 outline-none h-full ${
-          isSign
+          isLoginForm
             ? "rounded-[.2rem] border-gray-300 border-1 shadow shadow-sky-900/40 py-1.5"
             : "focus:shadow rounded-e-xl focus:shadow-sky-600 focus:ring-1"
         } focus:ring-sky-800/50 w-full text-gray-500`}

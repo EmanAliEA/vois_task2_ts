@@ -74,7 +74,7 @@ function Login() {
   };
 
   return (
-    <LoginForm onSubmit={handleSubmit} isSign={isSign}>
+    <LoginForm onSubmit={handleSubmit} isLoginForm={isSign}>
       <h2 className="text-xl sm:text-3xl lg:text-3xl font-semibold underline text-center text-sky-900">
         {isSign ? "Signup" : "Login"}
       </h2>

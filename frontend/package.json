@@ -38,6 +38,7 @@
     "globals": "^16.0.0",
     "jsdom": "^26.1.0",
     "postcss": "^8.5.3",
+    "redux-mock-store": "^1.5.5",
     "tailwindcss": "^4.1.6",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",

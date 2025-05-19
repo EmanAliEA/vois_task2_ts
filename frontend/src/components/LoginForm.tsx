@@ -3,7 +3,7 @@ import React from "react";
 
 interface LoginFormProps {
   children: React.ReactNode;
-  isSign: boolean;
+  isLoginForm: boolean;
   onSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
 }
 
@@ -27,13 +27,14 @@ const formStyle = clsx(
 
 const LoginForm: React.FC<LoginFormProps> = ({
   children,
-  isSign,
+  isLoginForm,
   onSubmit,
 }) => {
   return (
     <form
+      data-testid="login-form"
       onSubmit={onSubmit}
-      className={`${formStyle} ${isSign ? "lg:py-10" : "lg:py-28 mt-5"}`}
+      className={`${formStyle} ${isLoginForm ? "lg:py-10" : "lg:py-28 mt-5"}`}
     >
       {children}
     </form>

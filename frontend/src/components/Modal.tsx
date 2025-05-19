@@ -14,7 +14,7 @@ const Modal: React.FC<ModalProps> = ({ children }) => {
   }
 
   return createPortal(
-    <dialog className="bg-gray-300/15 flex items-center justify-center py-30 w-screen m-auto h-screen outline-none">
+    <dialog className="bg-gray-50/0 z-50 fixed flex items-center justify-center py-30 w-screen m-auto outline-none">
       {children}
     </dialog>,
     modalRoot
