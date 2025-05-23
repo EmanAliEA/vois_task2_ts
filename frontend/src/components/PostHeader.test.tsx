@@ -9,7 +9,6 @@ describe("PostHeader component", () => {
     vi.spyOn(postsApi, "formatDate").mockReturnValue("May 17, 2025");
 
     render(<PostHeader author="Jane Doe" date="2025-05-17" />);
-
     expect(screen.getByText("Jane Doe")).toBeInTheDocument();
     expect(screen.getByText("May 17, 2025")).toBeInTheDocument();
   });
